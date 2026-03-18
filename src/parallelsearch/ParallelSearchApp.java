@@ -13,6 +13,7 @@ import java.util.List;
 /**
  * Swing desktop application that performs live, parallel, case-insensitive
  * substring search over ~457 K four-letter strings loaded into memory.
+ *
  * @author Akshay Ghildiyal
  */
 public class ParallelSearchApp extends JFrame {
@@ -36,6 +37,19 @@ public class ParallelSearchApp extends JFrame {
         wireEvents();
         pack();
         setLocationRelativeTo(null);
+    }
+
+    public static void main(String[] args) {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {
+        }
+
+        SwingUtilities.invokeLater(() -> {
+            ParallelSearchApp app = new ParallelSearchApp();
+            app.setVisible(true);
+            app.loadData();
+        });
     }
 
     private void buildUI() {
@@ -103,14 +117,27 @@ public class ParallelSearchApp extends JFrame {
         setContentPane(root);
     }
 
+    // Search execution (background task)
+
     private void wireEvents() {
         debounceTimer = new Timer(SearchConfig.SEARCH_DEBOUNCE_MS, e -> performSearch());
         debounceTimer.setRepeats(false);
 
         DocumentListener liveSearch = new DocumentListener() {
-            @Override public void insertUpdate(DocumentEvent e) { debounceTimer.restart(); }
-            @Override public void removeUpdate(DocumentEvent e) { debounceTimer.restart(); }
-            @Override public void changedUpdate(DocumentEvent e) { debounceTimer.restart(); }
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                debounceTimer.restart();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                debounceTimer.restart();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                debounceTimer.restart();
+            }
         };
         searchField.getDocument().addDocumentListener(liveSearch);
         searchField.addActionListener(e -> performSearch());
@@ -128,7 +155,7 @@ public class ParallelSearchApp extends JFrame {
         });
     }
 
-    // Search execution (background task)
+    // Data loading (background task)
 
     private void performSearch() {
         if (engine == null) return;
@@ -187,7 +214,7 @@ public class ParallelSearchApp extends JFrame {
         activeSearch.execute();
     }
 
-    // Data loading (background task)
+    // ─── Custom list model backed by a List<String> ─────────────────────
 
     private void loadData() {
         new SwingWorker<Void, String>() {
@@ -202,7 +229,7 @@ public class ParallelSearchApp extends JFrame {
 
             @Override
             protected void process(List<String> chunks) {
-                infoLabel.setText(chunks.getLast());
+                infoLabel.setText(chunks.get(chunks.size() - 1));
             }
 
             @Override
@@ -225,8 +252,6 @@ public class ParallelSearchApp extends JFrame {
             }
         }.execute();
     }
-
-    // ─── Custom list model backed by a List<String> ─────────────────────
 
     private static class ResultListModel extends AbstractListModel<String> {
 
@@ -254,17 +279,5 @@ public class ParallelSearchApp extends JFrame {
         public String getElementAt(int index) {
             return data.get(index);
         }
-    }
-
-    public static void main(String[] args) {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception ignored) {}
-
-        SwingUtilities.invokeLater(() -> {
-            ParallelSearchApp app = new ParallelSearchApp();
-            app.setVisible(true);
-            app.loadData();
-        });
     }
 }
