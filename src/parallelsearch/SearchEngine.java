@@ -13,6 +13,7 @@ import java.util.concurrent.RecursiveTask;
  * until each slice is smaller than {@link SearchConfig#FORK_THRESHOLD}, at
  * which point a sequential scan is performed.  The pool parallelism is
  * controlled by {@link SearchConfig#MAX_THREADS}.
+ * @author Akshay Ghildiyal
  */
 public class SearchEngine {
 

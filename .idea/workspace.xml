@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b7ab682-0d91-4986-8417-6550fab2006a" name="Changes" comment="" />
+    <list default="true" id="8b7ab682-0d91-4986-8417-6550fab2006a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parallelsearch/DataStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parallelsearch/DataStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parallelsearch/ParallelSearchApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parallelsearch/ParallelSearchApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parallelsearch/SearchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parallelsearch/SearchConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parallelsearch/SearchEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parallelsearch/SearchEngine.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Akshay2098&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Akshay2098/Parallel-Search-App.git&quot;,
+    &quot;accountId&quot;: &quot;a01f0429-e6b4-4d6d-9a44-8e3aa5b43d49&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -22,35 +47,32 @@
   "keyToString": {
     "Application.ParallelSearchApp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "firstBranch",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/aksha/Downloads/ParallelSearchApp",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build",
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="ParallelSearchApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="parallelsearch.ParallelSearchApp" />
-      <module name="ParallelSearchApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="parallelsearch.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ParallelSearchApp" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

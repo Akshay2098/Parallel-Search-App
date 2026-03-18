@@ -13,6 +13,7 @@ import java.util.List;
 /**
  * Swing desktop application that performs live, parallel, case-insensitive
  * substring search over ~457 K four-letter strings loaded into memory.
+ * @author Akshay Ghildiyal
  */
 public class ParallelSearchApp extends JFrame {
 
