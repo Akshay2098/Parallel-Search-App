@@ -14,11 +14,13 @@ import java.util.List;
  * Generates (if needed) and loads the CSV data file containing every
  * four-letter uppercase combination from AAAA to ZZZZ (26^4 = 456 976 entries).
  * The loaded array is shuffled into random order before being returned.
+ *
  * @author Akshay Ghildiyal
  */
 public final class DataStore {
 
-    private DataStore() {}
+    private DataStore() {
+    }
 
     public static String[] loadOrGenerate() throws IOException {
         Path path = Paths.get(SearchConfig.DATA_FILE);
