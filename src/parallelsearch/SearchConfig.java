@@ -1,5 +1,8 @@
 package parallelsearch;
 
+/**
+ * @author Akshay Ghildiyal
+ */
 public final class SearchConfig {
 
     private SearchConfig() {}

@@ -28,8 +28,6 @@ Open `src/parallelsearch/SearchConfig.java` and change `MAX_THREADS`:
 public static final int MAX_THREADS = 4;   // use at most 4 cores
 ```
 
-Recompile with `./compile.sh` after editing.
-
 ## Project structure
 
 ```
